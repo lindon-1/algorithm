@@ -20,6 +20,15 @@ public class ForkJoinPoolDemo {
 
         System.out.println(IntStream.rangeClosed(1, 100).sum());
         IntStream.of(1, 3, 5, 2, 7, 4, 4, 5).sorted().forEach(e -> System.out.println(e));
+
+        //language=JSON
+        String a = "{\n" +
+                "  \"data\": {\n" +
+                "      \"userId\": \"123352342\",\n" +
+                "      \"password\": \"123456\"\n" +
+                "  }\n" +
+                "}";
+
     }
 
 }
