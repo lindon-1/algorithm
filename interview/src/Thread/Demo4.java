@@ -13,7 +13,7 @@ public class Demo4 {
         AtomicInteger num = new AtomicInteger(0);
         new Thread(() -> {
             while (num.get() < 100) {
-                if (num.get() % 2 == 0) {
+                if (num.get() % 2 == 0 && num.get() < 100) {
                     System.out.println(Thread.currentThread().getName() + ":" + num.get());
                     num.getAndIncrement();
                 }
@@ -21,7 +21,7 @@ public class Demo4 {
         }).start();
         new Thread(() -> {
             while (num.get() < 100) {
-                if (num.get() % 2 == 1) {
+                if (num.get() % 2 == 1 && num.get() < 100) {
                     System.out.println(Thread.currentThread().getName() + ":" + num.get());
                     num.getAndIncrement();
                 }
